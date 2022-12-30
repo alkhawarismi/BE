@@ -7,8 +7,7 @@ import history from 'connect-history-api-fallback'
 
 const app = express();
 app.use(bodyParser.json());
-app.use(favicon(path.join(dirname, "build", "favicon.ico")));
-app.use(express.static(path.join(dirname, "build")));
+
 
 app.use('/images', express.static(path.join(__dirname, '../assets')));
 app.use(express.static(path.resolve(__dirname, '../dist'), { maxAge: '1y', etag: false }));
